@@ -10,7 +10,7 @@ namespace Pehlivanlar.Envanter
         public int Amount { get; set; }
         public int UnitPrice { get; set; }
         public int TotalPrice { get; set; }
-        public int supplierID { get; set; }
+        public int SupplierID { get; set; }
 
     }
 }

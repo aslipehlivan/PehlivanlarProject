@@ -10,7 +10,7 @@ namespace Pehlivanlar.User
         public string Name { get; set; }
         public bool CanChangePassword { get; set; }
         public bool CanChangePrice { get; set; }
-        public bool CanchangeStock { get; set; }
+        public bool CanChangeStock { get; set; }
 
     }
 }

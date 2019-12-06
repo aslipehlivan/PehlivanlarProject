@@ -8,6 +8,6 @@ namespace Pehlivanlar
     public class PehlivanlarDb : DbContext
     {
         string connectionString = @"Server=.\SQLEXPRESS;Database=PehlivanlarDb;Trusted_Connection=True;";
-       
+      
     }
 }

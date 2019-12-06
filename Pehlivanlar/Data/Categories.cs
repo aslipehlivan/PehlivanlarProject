@@ -10,5 +10,6 @@ namespace Pehlivanlar.Data
         public string Name { get; set; }
 
 
+
     }
 }
