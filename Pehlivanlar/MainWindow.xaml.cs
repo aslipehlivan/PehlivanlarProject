@@ -28,5 +28,10 @@ namespace Pehlivanlar
         {
 
         }
+
+        private void btnNewUser_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

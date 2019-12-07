@@ -21,8 +21,7 @@ namespace Pehlivanlar.User
         [StringLength(256)]
         public string Password { get; set; }
         public DateTime CreatedTime { get; set; }
-        public string Role { get; set; }
-        public virtual Roles Roles { get; set; }
+        public virtual Roles Role { get; set; }
 
 
 
