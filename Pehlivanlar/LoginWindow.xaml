@@ -1,0 +1,30 @@
+﻿<Window x:Class="Pehlivanlar.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pehlivanlar"
+        mc:Ignorable="d"
+        Title="PEHLİVANLAR" Background="AntiqueWhite" FontFamily="Calibri" Height="290" Width="400">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="2" Text="Giriş yapmak için bilgilerinizi giriniz." TextWrapping="Wrap" FontFamily="Calibri" FontSize="20" Background="#FF619EA0" VerticalAlignment="Stretch" TextAlignment="Left" Height="36"/>
+        <TextBlock Background="CadetBlue" Grid.Row="1" Grid.Column="0" Margin="1,2" TextAlignment="Center" Text="Kullanıcı Adı:"/>
+        <TextBox Background="LightGray" x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="1,2"></TextBox>
+        <TextBlock Background="CadetBlue" Grid.Row="2" Grid.Column="0" Margin="1,2" TextAlignment="Center" Text="Şifre:"/>
+        <PasswordBox x:Name="txtPassword" Background="LightGray" Grid.Row="2" Grid.Column="1" Margin="1,2" />
+        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="200" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,5" Click="btnLogin_Click"></Button>
+        <Button x:Name="btnNewUser" Content="Yeni Kullanıcı Oluştur" Grid.Column="0" Margin="0,5" Grid.Row="4" Grid.ColumnSpan="2" Width="200" Click="btnNewUser_Click" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+    </Grid>
+</Window>

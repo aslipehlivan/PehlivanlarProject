@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pehlivanlar.User
 {
-    public class Roles
+    public class Role
     {
         public int ID { get; set; }
         public string Name { get; set; }
