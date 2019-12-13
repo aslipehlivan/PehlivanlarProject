@@ -13,54 +13,54 @@ namespace Pehlivanlar.Data
         {
 
         }
-    }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(connectionString);
+        }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer(connectionString);
-    }
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-
-        modelBuilder.Entity<Role>().HasData(
-            new Role
-            {
-                ID = 1,
-                Name = "Admin",
-                CanChangePassword = true,
-                CanChangePrice = true,
-                CanChangeStock = true
-            }
-        );
-    }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Role>().HasData(
-            new Role
-            {
-                ID = 2,
-                Name = "Personel",
-                CanChangePassword = false,
-                CanChangePrice = false,
-                CanChangeStock = false
-            }
+        {
+
+            modelBuilder.Entity<Role>().HasData(
+                new Role
+                {
+                    ID = 1,
+                    Name = "Admin",
+                    CanChangePassword = true,
+                    CanChangePrice = true,
+                    CanChangeStock = true
+                }
             );
+            modelBuilder.Entity<Role>().HasData(
+               new Role
+               {
+                   ID = 2,
+                   Name = "Personel",
+                   CanChangePassword = false,
+                   CanChangePrice = false,
+                   CanChangeStock = false
+               }
+               );
+            modelBuilder.Entity<PehUser>().HasData(
+               new PehUser
+               {
+                   ID = 1,
+                   Name = "Ayvaz",
+                   Surname = "Pehlivan",
+                   UserName = "admin",
+                   Password = new Service.PehUserService().hashPassword("admin"),
+                   CreatedTime = DateTime.Now,
+                   RoleID = 1
+               }
+           );
+
+
+
+        }
     }
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<PehUser>().HasData(
-            new PehUser
-            {
-                ID = 1,
-                Name = "Ayvaz",
-                Surname = "Pehlivan",
-                UserName = "admin",
-                Password = new Service.PehUserService().hashPassword("admin"),
-                CreatedTime = DateTime.Now,
-                RoleID =1
-            }
-        ) ;
-    }
+
+    
+   
 
 
 }

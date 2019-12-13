@@ -49,7 +49,7 @@ namespace Pehlivanlar
         private void mnChangePassword_Click(object sender, RoutedEventArgs e)
         {
             ChangePasswordWindow changePasswordWindow = new ChangePasswordWindow(loginUser);
-            ChangePasswordWindow.ShowDialog();
+            changePasswordWindow.ShowDialog();
         }
     }
 }
