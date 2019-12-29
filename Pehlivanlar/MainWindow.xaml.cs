@@ -20,9 +20,9 @@ namespace Pehlivanlar
     {
         private PehUser loginUser;
 
-        public MainWindow(PehUser cetUser)
+        public MainWindow(PehUser pehUser)
         {
-            loginUser = cetUser;
+            loginUser = pehUser;
             InitializeComponent();
         }
        
@@ -50,6 +50,20 @@ namespace Pehlivanlar
         {
             ChangePasswordWindow changePasswordWindow = new ChangePasswordWindow(loginUser);
             changePasswordWindow.ShowDialog();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            UserWindow1 userWindow1 = new UserWindow1(loginUser);
+            userWindow1.Show();
+            this.Close();
+        }
+
+        private void mnTV_Click(object sender, RoutedEventArgs e)
+        {
+          //  TvWindow tvWindow = new TvWindow();
+           // tvWindow.Show();
+            //this.Close();
         }
     }
 }

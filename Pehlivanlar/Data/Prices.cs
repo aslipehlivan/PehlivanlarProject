@@ -12,5 +12,6 @@ namespace Pehlivanlar
         public int Price { get; set; }
         public int ProductID { get; set; }
 
+
     }
 }

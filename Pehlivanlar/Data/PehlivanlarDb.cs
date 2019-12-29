@@ -9,6 +9,8 @@ namespace Pehlivanlar.Data
         string connectionString = @"Server=.\SQLEXPRESS;Database=PehlivanlarDb;Trusted_Connection=True;";
         public DbSet<PehUser> PehUsers { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Product> Products { get; set; }
         public PehlivanlarDb() : base()
         {
 
@@ -30,7 +32,8 @@ namespace Pehlivanlar.Data
                     CanChangePrice = true,
                     CanChangeStock = true
                 }
-            );
+                );
+
             modelBuilder.Entity<Role>().HasData(
                new Role
                {
@@ -41,6 +44,7 @@ namespace Pehlivanlar.Data
                    CanChangeStock = false
                }
                );
+
             modelBuilder.Entity<PehUser>().HasData(
                new PehUser
                {
@@ -49,18 +53,203 @@ namespace Pehlivanlar.Data
                    Surname = "Pehlivan",
                    UserName = "admin",
                    Password = new Service.PehUserService().hashPassword("admin"),
+                   RoleID = 1,
                    CreatedTime = DateTime.Now,
-                   RoleID = 1
                }
-           );
+               );
 
+            //Suppliers are added to database.
+            modelBuilder.Entity<Supplier>().HasData(
+                new Supplier
+                {
+                    ID = 1,
+                    Name = "Beko",
+                    Location = "İstanbul"
+                }
+                );
 
+            modelBuilder.Entity<Supplier>().HasData(
+                new Supplier
+                {
+                    ID = 2,
+                    Name = "Vestel",
+                    Location = "Manisa"
+                }
+                );
 
+            //Categories are added to database.
+            modelBuilder.Entity<Categories>().HasData(
+                new Categories
+                {
+                    ID = 1,
+                    Name = "Televizyon"
+                });
+
+            modelBuilder.Entity<Categories>().HasData(
+                new Categories
+                {
+                    ID = 2,
+                    Name = "Buzdolabı"
+                });
+
+            modelBuilder.Entity<Categories>().HasData(
+                new Categories
+                {
+                    ID = 3,
+                    Name = "Çamaşır Makinesi"
+                });
+
+            modelBuilder.Entity<Categories>().HasData(
+                new Categories
+                {
+                    ID = 4,
+                    Name = "Bulaşık Makinesi"
+                });
+
+            //Products are added to database.
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 1,
+                    Code = "Quadro",
+                    Color = "Siyah",
+                    Properties = 72,
+                    CategoryID = 1,
+                    SupplierID = 1,
+                    Stock = 12
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 2,
+                    Code = "Smart",
+                    Color = "Beyaz",
+                    Properties = 72,
+                    CategoryID = 1,
+                    SupplierID = 1,
+                    Stock = 3
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 3,
+                    Code = "Smart",
+                    Color = "Siyah",
+                    Properties = 105,
+                    CategoryID = 1,
+                    SupplierID = 2,
+                    Stock = 5
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 4,
+                    Code = "B1 8459 SMN",
+                    Color = "Beyaz",
+                    Properties = 465,
+                    CategoryID = 2,
+                    SupplierID = 1,
+                    Stock = 15
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 5,
+                    Code = "B1 8550 SM",
+                    Color = "Beyaz",
+                    Properties = 550,
+                    CategoryID = 2,
+                    SupplierID = 1,
+                    Stock = 6
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 6,
+                    Code = "854270 MB",
+                    Color = "Beyaz",
+                    Properties = 270,
+                    CategoryID = 2,
+                    SupplierID = 2,
+                    Stock = 15
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 7,
+                    Code = "BK 6081 L A++",
+                    Color = "Beyaz",
+                    Properties = 800,
+                    CategoryID = 3,
+                    SupplierID = 1,
+                    Stock = 17
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 8,
+                    Code = "D4 6081 E",
+                    Color = "Beyaz",
+                    Properties = 800,
+                    CategoryID = 3,
+                    SupplierID = 2,
+                    Stock = 9
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 9,
+                    Code = "BK 8101 EYS",
+                    Color = "Inox",
+                    Properties = 1000,
+                    CategoryID = 3,
+                    SupplierID = 2,
+                    Stock = 6
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 10,
+                    Code = "BM 3003",
+                    Color = "Beyaz",
+                    Properties = 3,
+                    CategoryID = 4,
+                    SupplierID = 1,
+                    Stock = 11
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 11,
+                    Code = "BM 3003 SY",
+                    Color = "Siyah",
+                    Properties = 3,
+                    CategoryID = 4,
+                    SupplierID = 1,
+                    Stock = 3
+                });
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product
+                {
+                    ID = 12,
+                    Code = "BM 4004",
+                    Color = "Beyaz",
+                    Properties = 4,
+                    CategoryID = 4,
+                    SupplierID = 2,
+                    Stock = 10
+                });
         }
     }
-
-    
-   
-
-
 }

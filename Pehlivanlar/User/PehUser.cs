@@ -7,6 +7,7 @@ namespace Pehlivanlar.User
 {
     public class PehUser
     {
+
         public int ID { get; set; }
         [Required]
         [StringLength(100, MinimumLength = 2)]
@@ -23,8 +24,6 @@ namespace Pehlivanlar.User
         public DateTime CreatedTime { get; set; }
         public int RoleID { get; set; }
         public virtual Role Role { get; set; }
-
-
 
     }
 }

@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Pehlivanlar.Data
 {
-    public class Suppliers
+    public class Supplier
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
     }
 }
+

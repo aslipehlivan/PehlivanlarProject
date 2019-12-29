@@ -1,4 +1,5 @@
-﻿using Pehlivanlar.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Pehlivanlar.Data;
 using Pehlivanlar.User;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Pehlivanlar.Service
         public PehUser Login (string UserName, string Password)
         {
             string hashedPasword = hashPassword(Password);
-            var loginUser = db.PehUsers.FirstOrDefault(u => u.UserName == UserName && u.Password == hashedPasword);
+            var loginUser = db.PehUsers.Where(u => u.UserName == UserName && u.Password == hashedPasword).Include(i => i.Role).FirstOrDefault();
 
             return loginUser;
         }
@@ -53,3 +54,4 @@ namespace Pehlivanlar.Service
         }
     }
 }
+

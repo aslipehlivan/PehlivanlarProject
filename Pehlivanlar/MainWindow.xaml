@@ -8,28 +8,28 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" HorizontalAlignment="Stretch" FontFamily="Calibri" FontSize="16">
-            <MenuItem Header="Kullanıcı">
+        <Menu Background="LightSteelBlue" Grid.Row="0" HorizontalAlignment="Stretch" FontFamily="Calibri" FontSize="18">
+            <MenuItem Header="Kullanıcı"  FontSize="22" Height="50" Click="MenuItem_Click_1">
                 <MenuItem Header="Yeni"></MenuItem>
-                <MenuItem Header="Bilgileri gör"></MenuItem>
+                <MenuItem x:Name="mnUserInfo" Header="Bilgileri gör"></MenuItem>
             </MenuItem>
-            <MenuItem Header="Ürünler">
+            <MenuItem Header="Ürünler" FontSize="22" Height="50">
                 <MenuItem Header="Buzdolabı"></MenuItem>
                 <MenuItem Header="Çamaşır Makinesi"></MenuItem>
                 <MenuItem Header="Bulaşık Makinesi"></MenuItem>
-                <MenuItem Header="Televizyon"></MenuItem>
+                <MenuItem x:Name="mnTV" Header="Televizyon" Click="mnTV_Click"></MenuItem>
             </MenuItem>
-            <MenuItem Header="İşlemler">
+            <MenuItem Header="İşlemler" FontSize="22" Height="50">
                 <MenuItem Header="Çıkış Yap"></MenuItem>
                 <MenuItem Header="Şifre Değiştir" Name="mnChangePassword" Click="mnChangePassword_Click" ></MenuItem>
                 <MenuItem Header="Uygulamadan Çık" Click="MenuItem_Click"></MenuItem>
                 
             </MenuItem>
         </Menu>
-        <TextBlock Name="txtLoginUser" Grid.Row="1" FontFamily="Calibri" FontSize="16"/>
+        <TextBlock Background="Bisque" Name="txtLoginUser" Grid.Row="1" FontFamily="Calibri" FontSize="22"/>
     </Grid>
 </Window>
