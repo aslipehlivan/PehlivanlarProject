@@ -9,7 +9,7 @@ namespace Pehlivanlar.Data
         public int ID { get; set; }
         public string Code { get; set; }
         public string Color { get; set; }
-        public int Properties { get; set; }
+        public string Properties { get; set; }
         public int CategoryID { get; set; }
         public int SupplierID { get; set; }
         public int Stock { get; set; }

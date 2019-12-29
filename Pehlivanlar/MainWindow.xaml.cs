@@ -65,5 +65,27 @@ namespace Pehlivanlar
            // tvWindow.Show();
             //this.Close();
         }
+
+        private void btnPurchase_Click(object sender, RoutedEventArgs e)
+        {
+            PurchaseWindow purchaseWindow = new PurchaseWindow();
+            purchaseWindow.Show();
+            this.Close();
+
+        }
+
+        private void btnNewProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewProductWindow addNewProductWindow = new AddNewProductWindow();
+            addNewProductWindow.Show();
+            this.Close();
+        }
+
+        private void btnSale_Click(object sender, RoutedEventArgs e)
+        {
+            SaleWindow saleWindow = new SaleWindow();
+            saleWindow.Show();
+            this.Close();
+        }
     }
 }

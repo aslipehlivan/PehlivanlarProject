@@ -1,0 +1,42 @@
+﻿<Window x:Class="Pehlivanlar.AddNewProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pehlivanlar"
+        mc:Ignorable="d"
+        Title="Yeni Ürün Ekle" Height="500" Width="400">
+    <StackPanel Margin="15">
+        <Label Content="Ürün kodu" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtCode" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        
+        <Label Content="Ürün rengi" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtColor" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        
+        <Label Content="Ürün özellikleri" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtProperties" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
+        <ComboBox x:Name="cbCategories" Margin="5">
+
+             <ComboBoxItem Content="Televizyon"></ComboBoxItem>
+             <ComboBoxItem Content="Buzdolabı"></ComboBoxItem>
+             <ComboBoxItem Content="Çamaşır Makinesi"></ComboBoxItem>
+             <ComboBoxItem Content="Bulaşık Makinesi"></ComboBoxItem>
+
+        </ComboBox>
+       
+        <Label Content="Alınan Firma" Height="25" FontFamily="Calibri"/>
+        <ComboBox x:Name="cbSuppliers" Margin="5">
+
+            <TextBlock Text="{Binding Name}"></TextBlock>
+            <ComboBoxItem Content="Beko" x:Name="cbBeko" Selected="cbBeko_Selected"></ComboBoxItem>
+            <ComboBoxItem Content="Vestel" x:Name="cbVestel"></ComboBoxItem>
+
+        </ComboBox>
+        <Button x:Name="btnAddProduct" Content="Ekle" FontFamily="Calibri" Margin="5,5,5,5" Click="btnAddProduct_Click" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+
+    </StackPanel>
+</Window>

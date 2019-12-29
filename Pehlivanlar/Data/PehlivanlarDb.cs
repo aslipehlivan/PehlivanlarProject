@@ -113,7 +113,7 @@ namespace Pehlivanlar.Data
                     ID = 1,
                     Code = "Quadro",
                     Color = "Siyah",
-                    Properties = 72,
+                    Properties = "72 Ekran",
                     CategoryID = 1,
                     SupplierID = 1,
                     Stock = 12
@@ -125,7 +125,7 @@ namespace Pehlivanlar.Data
                     ID = 2,
                     Code = "Smart",
                     Color = "Beyaz",
-                    Properties = 72,
+                    Properties = "72 Ekran",
                     CategoryID = 1,
                     SupplierID = 1,
                     Stock = 3
@@ -137,7 +137,7 @@ namespace Pehlivanlar.Data
                     ID = 3,
                     Code = "Smart",
                     Color = "Siyah",
-                    Properties = 105,
+                    Properties = "105 Ekran",
                     CategoryID = 1,
                     SupplierID = 2,
                     Stock = 5
@@ -149,7 +149,7 @@ namespace Pehlivanlar.Data
                     ID = 4,
                     Code = "B1 8459 SMN",
                     Color = "Beyaz",
-                    Properties = 465,
+                    Properties = "465 Litre",
                     CategoryID = 2,
                     SupplierID = 1,
                     Stock = 15
@@ -161,7 +161,7 @@ namespace Pehlivanlar.Data
                     ID = 5,
                     Code = "B1 8550 SM",
                     Color = "Beyaz",
-                    Properties = 550,
+                    Properties = "550 Litre",
                     CategoryID = 2,
                     SupplierID = 1,
                     Stock = 6
@@ -173,7 +173,7 @@ namespace Pehlivanlar.Data
                     ID = 6,
                     Code = "854270 MB",
                     Color = "Beyaz",
-                    Properties = 270,
+                    Properties = "270 Litre",
                     CategoryID = 2,
                     SupplierID = 2,
                     Stock = 15
@@ -185,7 +185,7 @@ namespace Pehlivanlar.Data
                     ID = 7,
                     Code = "BK 6081 L A++",
                     Color = "Beyaz",
-                    Properties = 800,
+                    Properties = "800 Litre",
                     CategoryID = 3,
                     SupplierID = 1,
                     Stock = 17
@@ -197,7 +197,7 @@ namespace Pehlivanlar.Data
                     ID = 8,
                     Code = "D4 6081 E",
                     Color = "Beyaz",
-                    Properties = 800,
+                    Properties = "800 Devir",
                     CategoryID = 3,
                     SupplierID = 2,
                     Stock = 9
@@ -209,7 +209,7 @@ namespace Pehlivanlar.Data
                     ID = 9,
                     Code = "BK 8101 EYS",
                     Color = "Inox",
-                    Properties = 1000,
+                    Properties = "1000 Devir",
                     CategoryID = 3,
                     SupplierID = 2,
                     Stock = 6
@@ -221,7 +221,7 @@ namespace Pehlivanlar.Data
                     ID = 10,
                     Code = "BM 3003",
                     Color = "Beyaz",
-                    Properties = 3,
+                    Properties = "3 Programlı",
                     CategoryID = 4,
                     SupplierID = 1,
                     Stock = 11
@@ -233,7 +233,7 @@ namespace Pehlivanlar.Data
                     ID = 11,
                     Code = "BM 3003 SY",
                     Color = "Siyah",
-                    Properties = 3,
+                    Properties = "3 Programlı",
                     CategoryID = 4,
                     SupplierID = 1,
                     Stock = 3
@@ -245,7 +245,7 @@ namespace Pehlivanlar.Data
                     ID = 12,
                     Code = "BM 4004",
                     Color = "Beyaz",
-                    Properties = 4,
+                    Properties = "4 Programlı",
                     CategoryID = 4,
                     SupplierID = 2,
                     Stock = 10
