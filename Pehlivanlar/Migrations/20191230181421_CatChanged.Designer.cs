@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pehlivanlar.Data;
 
 namespace Pehlivanlar.Migrations
 {
     [DbContext(typeof(PehlivanlarDb))]
-    partial class PehlivanlarDbModelSnapshot : ModelSnapshot
+    [Migration("20191230181421_CatChanged")]
+    partial class CatChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

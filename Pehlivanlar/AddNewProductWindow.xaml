@@ -17,21 +17,30 @@
         <TextBox Text="" Name="txtProperties" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCategories" Margin="5" ContextMenuOpening="cbCategories_ContextMenuOpening">
-
-             <!--<ComboBoxItem Content="Televizyon" x:Name="cbTelevizyon" DataObject.Copying="cbTV" Selected="cbTelevizyon_Selected"></ComboBoxItem>
-             <ComboBoxItem Content="Buzdolabı" x:Name="cbBuzdolabı" Selected="cbBuzdolabı_Selected"></ComboBoxItem>
-             <ComboBoxItem Content="Çamaşır Makinesi" x:Name="cbCamasir" Selected="cbCamasir_Selected"></ComboBoxItem>
-             <ComboBoxItem Content="Bulaşık Makinesi" x:Name="cbBulaik" Selected="cbBulaik_Selected"></ComboBoxItem>-->
+        <ComboBox x:Name="cbCategories">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                        <TextBlock Text=" "></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
 
         </ComboBox>
-       
-        <Label Content="Alınan Firma" Height="25" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbSuppliers" Margin="5">
 
-            <TextBlock Text="{Binding Name}"></TextBlock>
-            <ComboBoxItem Content="Beko" x:Name="cbBeko" Selected="cbBeko_Selected"></ComboBoxItem>
-            <ComboBoxItem Content="Vestel" x:Name="cbVestel" Selected="cbVestel_Selected"></ComboBoxItem>
+        <Label Content="Alınan Firma" Height="25" FontFamily="Calibri"/>
+        <ComboBox x:Name="cbSuppliers">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                        <TextBlock Text=" "></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
 
         </ComboBox>
         <Button x:Name="btnAddProduct" Content="Ekle" Background="ForestGreen"  FontFamily="Calibri" Margin="5,5,5,5" Click="btnAddProduct_Click" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>

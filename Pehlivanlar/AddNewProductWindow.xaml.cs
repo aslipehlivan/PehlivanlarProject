@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Pehlivanlar.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using System.Linq;
 
 namespace Pehlivanlar
 {
@@ -30,91 +31,54 @@ namespace Pehlivanlar
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-           // if ()
-           // {
-                Product product = new Product();
-                product.Code = txtCode.ToString();
-                product.Color = txtColor.ToString();
-                product.Properties = txtProperties.ToString();
-                product.SupplierID = 1;
-                
 
-                db.Products.Add(product);
+            Product product = new Product();
+            product.Code = txtCode.Text;
+            product.Color = txtColor.Text;
+            product.Properties = txtProperties.Text;
+           // product.CategoryID = Convert.ToInt32(cbCategories.SelectedItem);
+
+            var selectedCategory = cbCategories.SelectedItem as Category;
+            if (selectedCategory == null)
+            {
+                MessageBox.Show("Kategori seçiniz");
+                return;
+            }
+
+            product.CategoryID = selectedCategory.ID;
+
+            db.Products.Add(product);
                 db.SaveChanges();
 
-                MessageBox.Show("Yeni ürün eklendi.");
-           // }
-           
-
-            MessageBox.Show("Yeni ürün eklendi.");
-        }
-
-        private void cbBeko_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.SupplierID = 1;
-        }
-
-        private void cbVestel_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.SupplierID = 2;
-        }
-
-        private void cbTelevizyon_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.CategoryID = 1;
-        }
-
-        private void cbBuzdolabı_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.CategoryID = 2;
-        }
-
-        private void cbCamasir_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.CategoryID = 3;
-        }
-
-        private void cbBulaik_Selected(object sender, RoutedEventArgs e)
-        {
-            Product product = new Product();
-            product.CategoryID = 4;
-        }
-
-        private void cbTV(object sender, DataObjectCopyingEventArgs e)
-        {
-            Product product = new Product();
-            product.CategoryID = 1;
-        }
-
-        private void cbCategories_ContextMenuOpening(object sender, ContextMenuEventArgs e)
-        {
-     
-            SqlCommand cmd = new SqlCommand("select Code from Categories");
-            Sdr = cmd.ExecuteReader();
-            while (Sdr.Read())
-            {
-                for (int i = 0; i < Sdr.FieldCount; i++)
-                {
-                    cbCategories.Items.Add(Sdr.GetString(i));
-
-                }
-            }
-            MessageBox.Show(Sdr.FieldCount.ToString());
+                MessageBox.Show("Yeni ürün eklendi.");  
 
         }
+
+
+
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
 
-                var departments = db.Categories.OrderBy(d => d.Name).ToList();
-                cbCategories.ItemsSource = departments;
-           
+            var categories = db.Categories.OrderBy(c => c.Name).ToList();
+            cbCategories.ItemsSource = categories;
+
+            var suppliers = db.Suppliers.OrderBy(s => s.Name).ToList();
+            cbSuppliers.ItemsSource = suppliers;
+
         }
+
+        //private void cbCategories_Selected(object sender, RoutedEventArgs e)
+        //{
+        //    var selectedCategory = cbCategories.SelectedItem as Category;
+        //    if (selectedCategory == null)
+        //    {
+        //        MessageBox.Show("Kategori seçiniz");
+        //        return;
+        //    }
+
+        //    product  = selectedDepartmen.Id;
+        //}
     }
 }
