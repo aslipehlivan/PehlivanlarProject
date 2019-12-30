@@ -28,7 +28,7 @@ namespace Pehlivanlar.Data
                 new Role
                 {
                     ID = 1,
-                    Name = "Admin",
+                    Name = "Yönetici",
                     CanChangePassword = true,
                     CanChangePrice = true,
                     CanChangeStock = true
@@ -251,6 +251,18 @@ namespace Pehlivanlar.Data
                     SupplierID = 2,
                     Stock = 10
                 });
+            modelBuilder.Entity<PehUser>().HasData(
+              new PehUser
+              {
+                  ID = 2,
+                  Name = "Yaşar",
+                  Surname = "Acar",
+                  UserName = "yasar",
+                  Password = new Service.PehUserService().hashPassword("yasar"),
+                  RoleID = 2,
+                  CreatedTime = DateTime.Now,
+              }
+              );
         }
     }
 }

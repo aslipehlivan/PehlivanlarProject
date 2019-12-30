@@ -36,7 +36,7 @@ namespace Pehlivanlar
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            txtLoginUser.Text = "Merhaba " + loginUser.Name + " " + loginUser.Surname + "Rolünüz: " + loginUser.Role.Name;
+            txtLoginUser.Text = "Merhaba " + loginUser.Name + " " + loginUser.Surname + "\n " + "Rolünüz: " + loginUser.Role.Name;
             SetUserMenuAccordingTRole(loginUser.Role);
         }
 
@@ -52,33 +52,35 @@ namespace Pehlivanlar
             changePasswordWindow.ShowDialog();
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-            UserWindow1 userWindow1 = new UserWindow1(loginUser);
-            userWindow1.Show();
-            this.Close();
-        }
-
-        private void mnTV_Click(object sender, RoutedEventArgs e)
-        {
-          //  TvWindow tvWindow = new TvWindow();
-           // tvWindow.Show();
-            //this.Close();
-        }
-
         private void btnPurchase_Click(object sender, RoutedEventArgs e)
         {
-            PurchaseWindow purchaseWindow = new PurchaseWindow();
-            purchaseWindow.Show();
-            this.Close();
+            if (loginUser.RoleID == 1)
+            {
+                PurchaseWindow purchaseWindow = new PurchaseWindow();
+                purchaseWindow.Show();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Bu işlem için erişiminiz bulunmamaktadır.");
+            }
 
         }
 
         private void btnNewProduct_Click(object sender, RoutedEventArgs e)
         {
-            AddNewProductWindow addNewProductWindow = new AddNewProductWindow();
-            addNewProductWindow.Show();
-            this.Close();
+            if (loginUser.RoleID == 1)
+            {
+                AddNewProductWindow addNewProductWindow = new AddNewProductWindow();
+                addNewProductWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bu işlem için erişiminiz bulunmamaktadır.");
+            }
+
         }
 
         private void btnSale_Click(object sender, RoutedEventArgs e)
@@ -86,6 +88,39 @@ namespace Pehlivanlar
             SaleWindow saleWindow = new SaleWindow();
             saleWindow.Show();
             this.Close();
+        }
+
+        private void mnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Hesabınızdan çıkmak istediğinize emin misiniz?", "Onay", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.Show();
+                this.Close();
+            }
+
+        }
+
+        private void mnUserInfo_Click(object sender, RoutedEventArgs e)
+        {
+            UserWindow1 userWindow1 = new UserWindow1(loginUser);
+            userWindow1.Show();
+            this.Close();
+        }
+
+        private void mnNewUser_Click(object sender, RoutedEventArgs e)
+        {
+            if (loginUser.RoleID == 1)
+            {
+                NewUserWindow newUserWindow = new NewUserWindow();
+                newUserWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bu işlem için erişiminiz bulunmamaktadır.");
+            }
+
         }
     }
 }

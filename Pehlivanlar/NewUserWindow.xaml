@@ -1,0 +1,40 @@
+﻿<Window x:Class="Pehlivanlar.NewUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pehlivanlar"
+        mc:Ignorable="d"
+        Title="Yeni Kullanıcı Oluştur" Height="400" Width="400" Loaded="Window_Loaded">
+    <StackPanel Margin="15">
+        <Label Content="Ad" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtName" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Label Content="Soyad" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtSurname" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Label Content="Kullanıcı Adı" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtUserName" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content=" Şifre" Height="25" FontFamily="Calibri"/>
+        <PasswordBox Margin="5" x:Name="pwPassword"/>
+
+        <Label Content="Rol" Height="25" FontFamily="Calibri"/>
+        <ComboBox x:Name="cbUserRole" Margin="5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                        <TextBlock Text=" "></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+        
+        <Button x:Name="btnAddUser" Content="Kaydet" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5"  Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btnAddUser_Click"/>
+        <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" />
+        
+    </StackPanel>
+</Window>

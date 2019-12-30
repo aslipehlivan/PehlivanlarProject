@@ -39,12 +39,6 @@ namespace Pehlivanlar
                 mainWindow.Show();
                 this.Close();
             }
-
-        }
-
-        private void btnNewUser_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

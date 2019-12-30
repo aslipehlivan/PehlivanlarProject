@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pehlivanlar.Data;
 
 namespace Pehlivanlar.Migrations
 {
     [DbContext(typeof(PehlivanlarDb))]
-    partial class PehlivanlarDbModelSnapshot : ModelSnapshot
+    [Migration("20191230220212_newuser")]
+    partial class newuser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -283,7 +285,7 @@ namespace Pehlivanlar.Migrations
                         new
                         {
                             ID = 1,
-                            CreatedTime = new DateTime(2019, 12, 31, 1, 42, 27, 500, DateTimeKind.Local).AddTicks(5006),
+                            CreatedTime = new DateTime(2019, 12, 31, 1, 2, 12, 53, DateTimeKind.Local).AddTicks(9374),
                             Name = "Ayvaz",
                             Password = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
                             RoleID = 1,
@@ -293,7 +295,7 @@ namespace Pehlivanlar.Migrations
                         new
                         {
                             ID = 2,
-                            CreatedTime = new DateTime(2019, 12, 31, 1, 42, 27, 502, DateTimeKind.Local).AddTicks(5707),
+                            CreatedTime = new DateTime(2019, 12, 31, 1, 2, 12, 56, DateTimeKind.Local).AddTicks(2493),
                             Name = "Yaşar",
                             Password = "840c2dce747a818940d2c83d918a712a890ccdcfa4a97b1ccb71ec5d6cea1bbb",
                             RoleID = 2,
@@ -332,7 +334,7 @@ namespace Pehlivanlar.Migrations
                             CanChangePassword = true,
                             CanChangePrice = true,
                             CanChangeStock = true,
-                            Name = "Yönetici"
+                            Name = "Admin"
                         },
                         new
                         {

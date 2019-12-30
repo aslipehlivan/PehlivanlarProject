@@ -19,25 +19,18 @@ namespace Pehlivanlar
     /// </summary>
     public partial class PurchaseWindow : Window
     {
-
+        PehlivanlarDb db = new PehlivanlarDb();
         public PurchaseWindow()
         {
             InitializeComponent();
         }
 
 
-        private void btnChoose_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        //private void btnSelectCode_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Product product = new Product();
+        //    var selectedCode = cbCodes.SelectedItem as Code;
 
-        private void dgPurchase_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            Category categories = dgPurchase.SelectedItem as Category;
-            if (categories != null)
-            {
-
-            }
-        }
+        //}
     }
 }

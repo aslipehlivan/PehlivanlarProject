@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Pehlivanlar.Data;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -19,24 +20,13 @@ namespace Pehlivanlar
     /// </summary>
     public partial class SaleWindow : Window
     {
+        PehlivanlarDb db = new PehlivanlarDb();
         public SaleWindow()
         {
             InitializeComponent();
-            //bidDataGrid();
+
         }
 
-        //private void bidDataGrid()
-        //{
-        //    SqlConnection connection = new SqlConnection();
-        //    connection.ConnectionString = ConfigurationManager.ConnectionStrings[""].ConnectionString;
-        //    connection.Open();
-        //    SqlCommand command = new SqlCommand();
-        //    command.CommandText = "select * from [Categories]";
-        //    command.Connection = connection;
-        //    SqlDataAdapter da = new SqlDataAdapter();
-        //    DataTemplate dt = new DataTemplate ("Categories");
-        //    da.Fill(dt);
-
-        //}
+   
     }
 }

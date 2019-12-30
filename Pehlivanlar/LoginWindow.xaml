@@ -5,27 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="PEHLİVANLAR" Background="Beige" FontFamily="Calibri" Height="310" Width="400">
+        Title="PEHLİVANLAR" Background="Beige" FontFamily="Calibri" Height="350" Width="400">
     <Grid Margin="15">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Left" Grid.ColumnSpan="2" Text="Giriş yapmak için bilgilerinizi giriniz." TextWrapping="Wrap" FontFamily="Calibri" FontSize="16" TextAlignment="Left" Margin="63,48,0,10" Width="240"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="63,10,14,12" TextAlignment="Center" Text="Kullanıcı Adı:" FontSize="16"/>
-        <TextBox Background="LightGray" x:Name="txtUserName" Grid.Row="1" Grid.Column="1" Margin="1,10,1,10"></TextBox>
-        <TextBlock Grid.Row="2" Grid.Column="0" Margin="42,12,42,7" TextAlignment="Center" Text="Şifre:" FontSize="16"/>
-        <PasswordBox x:Name="txtPassword" Background="LightGray" Grid.Row="2" Grid.Column="1" Margin="1,10,1,10" />
-        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="200" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,5" Click="btnLogin_Click"></Button>
-        <Button x:Name="btnNewUser" Content="Yeni Kullanıcı Oluştur" Grid.Column="0" Margin="0,5" Grid.Row="4" Grid.ColumnSpan="2" Width="200" Click="btnNewUser_Click" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
-        <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="360" Source="C:\Users\PEHLİVANLAR\Desktop\logo1.JPG" Grid.ColumnSpan="2" Margin="42,0,0,0" />
+        <TextBlock HorizontalAlignment="Left" Grid.ColumnSpan="2" Text="Giriş yapmak için bilgilerinizi giriniz." TextWrapping="Wrap" FontFamily="Calibri" FontSize="16" TextAlignment="Left" Margin="65,53,0,5" Width="240"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="40,0,0,0" TextAlignment="Center" Text="Kullanıcı Adı:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Background="LightGray" x:Name="txtUserName" Grid.Row="1" Margin="175,10,27,10" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="40,0,0,0" TextAlignment="Center" Text="Şifre:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <PasswordBox x:Name="txtPassword" Background="LightGray" Grid.Row="2" Margin="175,10,27,10" Grid.ColumnSpan="2" />
+        <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="200" Grid.Column="0" Grid.ColumnSpan="2"  Click="btnLogin_Click" Margin="40,17,0,57" Height="30"/>
+        <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="228" Source="C:\Users\PEHLİVANLAR\Desktop\logo1.JPG" Grid.ColumnSpan="2" Margin="65,0,0,0" RenderTransformOrigin="0.529,0.522" />
 
 
     </Grid>

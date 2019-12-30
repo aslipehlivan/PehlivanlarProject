@@ -5,23 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Satış" Height="310" Width="400">
+        Title="Satış" Height="360" Width="400">
     <StackPanel>
-        <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
+        <Label Content="Satılan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
-
-            <ComboBoxItem Content="Televizyon" ></ComboBoxItem>
-            <ComboBoxItem Content="Buzdolabı" ></ComboBoxItem>
-            <ComboBoxItem Content="Çamaşır Makinesi"></ComboBoxItem>
-            <ComboBoxItem Content="Bulaşık Makinesi" ></ComboBoxItem>
-
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                        <TextBlock Text=" "></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Seç" x:Name="btnSelect" Margin="30,5,30,5"/>
-        <ComboBox Margin=" 5">
-            <ComboBoxItem></ComboBoxItem>
-            <ComboBoxItem></ComboBoxItem>
+        <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>
+
+        <Label Content="Satılan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
+        <ComboBox x:Name="cbCodes" Margin="5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                        <TextBlock Text=" "></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
         </ComboBox>
-       
+        <Button Content="Seç" x:Name="btnSelectCode" Margin="5"></Button>
+
+        <Label Content="Satılan ürünün adedini giriniz." Height="25" Margin="5" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Button x:Name="btnPurchase" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+
 
 
     </StackPanel>

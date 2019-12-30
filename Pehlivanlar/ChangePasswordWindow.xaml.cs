@@ -42,13 +42,16 @@ namespace Pehlivanlar
             {
                 MessageBox.Show("Yeni şifreler uyumlu değil.");
             }
+            if (txtNewPassword.Text == txtCurrentPassword.Text)
+            {
+                MessageBox.Show("Yeni şifre eski şifre ile aynı olamaz.");
+            }
             else
             {
                 pehUserService.ChangePassword(pehUser, txtNewPassword.Text);
                 MessageBox.Show("Şifreniz başarılı bir şekilde değiştirildi!");
                 this.Close();
             }
-           
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
