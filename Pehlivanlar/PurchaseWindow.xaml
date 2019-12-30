@@ -29,7 +29,6 @@
                 <DataGridTextColumn Header="Stok" Binding="{Binding Path=Stock}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnHomePage" Content="Anasayfa" HorizontalAlignment="Left" Margin="329,45,0,0" Grid.Row="3" VerticalAlignment="Top" Click="btnHomePage_Click"/>
 
 
     </StackPanel>

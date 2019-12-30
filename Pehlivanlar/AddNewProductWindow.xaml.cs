@@ -28,19 +28,62 @@ namespace Pehlivanlar
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product();
-            product.Code = txtCode.ToString();
-            product.Color = txtColor.ToString();
-            product.Properties = txtProperties.ToString();
-            
+           // if ()
+           // {
+                Product product = new Product();
+                product.Code = txtCode.ToString();
+                product.Color = txtColor.ToString();
+                product.Properties = txtProperties.ToString();
+                product.SupplierID = 1;
+                
 
-            db.Products.Add(product);
-            db.SaveChanges();
+                db.Products.Add(product);
+                db.SaveChanges();
+
+                MessageBox.Show("Yeni ürün eklendi.");
+           // }
+           
 
             MessageBox.Show("Yeni ürün eklendi.");
         }
 
         private void cbBeko_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.SupplierID = 1;
+        }
+
+        private void cbVestel_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.SupplierID = 2;
+        }
+
+        private void cbTelevizyon_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.CategoryID = 1;
+        }
+
+        private void cbBuzdolabı_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.CategoryID = 2;
+        }
+
+        private void cbCamasir_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.CategoryID = 3;
+        }
+
+        private void cbBulaik_Selected(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            product.CategoryID = 4;
+        }
+
+        private void cbTV(object sender, DataObjectCopyingEventArgs e)
         {
             Product product = new Product();
             product.CategoryID = 1;

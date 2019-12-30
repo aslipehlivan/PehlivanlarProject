@@ -19,10 +19,10 @@
         <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
 
-             <ComboBoxItem Content="Televizyon"></ComboBoxItem>
-             <ComboBoxItem Content="Buzdolabı"></ComboBoxItem>
-             <ComboBoxItem Content="Çamaşır Makinesi"></ComboBoxItem>
-             <ComboBoxItem Content="Bulaşık Makinesi"></ComboBoxItem>
+             <ComboBoxItem Content="Televizyon" x:Name="cbTelevizyon" DataObject.Copying="cbTV" Selected="cbTelevizyon_Selected"></ComboBoxItem>
+             <ComboBoxItem Content="Buzdolabı" x:Name="cbBuzdolabı" Selected="cbBuzdolabı_Selected"></ComboBoxItem>
+             <ComboBoxItem Content="Çamaşır Makinesi" x:Name="cbCamasir" Selected="cbCamasir_Selected"></ComboBoxItem>
+             <ComboBoxItem Content="Bulaşık Makinesi" x:Name="cbBulaik" Selected="cbBulaik_Selected"></ComboBoxItem>
 
         </ComboBox>
        
@@ -31,10 +31,10 @@
 
             <TextBlock Text="{Binding Name}"></TextBlock>
             <ComboBoxItem Content="Beko" x:Name="cbBeko" Selected="cbBeko_Selected"></ComboBoxItem>
-            <ComboBoxItem Content="Vestel" x:Name="cbVestel"></ComboBoxItem>
+            <ComboBoxItem Content="Vestel" x:Name="cbVestel" Selected="cbVestel_Selected"></ComboBoxItem>
 
         </ComboBox>
-        <Button x:Name="btnAddProduct" Content="Ekle" FontFamily="Calibri" Margin="5,5,5,5" Click="btnAddProduct_Click" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnAddProduct" Content="Ekle" Background="ForestGreen"  FontFamily="Calibri" Margin="5,5,5,5" Click="btnAddProduct_Click" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 
 

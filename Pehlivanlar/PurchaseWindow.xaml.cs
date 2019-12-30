@@ -25,11 +25,6 @@ namespace Pehlivanlar
             InitializeComponent();
         }
 
-        private void btnHomePage_Click(object sender, RoutedEventArgs e)
-        {
-            
-            this.Close();
-        }
 
         private void btnChoose_Click(object sender, RoutedEventArgs e)
         {
