@@ -10,10 +10,10 @@
         <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
 
-            <ComboBoxItem Content="Televizyon" x:Name="cbTelevizyon" Selected="cbTelevizyon_Selected"></ComboBoxItem>
-            <ComboBoxItem Content="Buzdolabı" x:Name="cbBuzdolabı" Selected="cbBuzdolabı_Selected"></ComboBoxItem>
-            <ComboBoxItem Content="Çamaşır Makinesi" x:Name="cbCamasir" Selected="cbCamasir_Selected"></ComboBoxItem>
-            <ComboBoxItem Content="Bulaşık Makinesi" x:Name="cbBulaik" Selected="cbBulaik_Selected"></ComboBoxItem>
+            <ComboBoxItem Content="Televizyon" ></ComboBoxItem>
+            <ComboBoxItem Content="Buzdolabı" ></ComboBoxItem>
+            <ComboBoxItem Content="Çamaşır Makinesi"></ComboBoxItem>
+            <ComboBoxItem Content="Bulaşık Makinesi" ></ComboBoxItem>
 
         </ComboBox>
         <Button Content="Seç" x:Name="btnSelect" Margin="30,5,30,5"/>

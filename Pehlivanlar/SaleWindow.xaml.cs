@@ -22,7 +22,7 @@ namespace Pehlivanlar
         public SaleWindow()
         {
             InitializeComponent();
-            bidDataGrid();
+            //bidDataGrid();
         }
 
         //private void bidDataGrid()

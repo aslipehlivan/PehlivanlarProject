@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pehlivanlar.Data
 {
-    public class Categories
+    public class Category
     {
         public int ID { get; set; }
         public string Name { get; set; }

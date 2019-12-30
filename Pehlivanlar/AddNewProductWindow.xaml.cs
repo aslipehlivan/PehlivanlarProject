@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Pehlivanlar.Data;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Data.SqlClient;
 
 namespace Pehlivanlar
 {
@@ -25,6 +25,8 @@ namespace Pehlivanlar
             InitializeComponent();
         }
         PehlivanlarDb db = new PehlivanlarDb();
+
+        public SqlDataReader Sdr { get; private set; }
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
@@ -87,6 +89,32 @@ namespace Pehlivanlar
         {
             Product product = new Product();
             product.CategoryID = 1;
+        }
+
+        private void cbCategories_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+     
+            SqlCommand cmd = new SqlCommand("select Code from Categories");
+            Sdr = cmd.ExecuteReader();
+            while (Sdr.Read())
+            {
+                for (int i = 0; i < Sdr.FieldCount; i++)
+                {
+                    cbCategories.Items.Add(Sdr.GetString(i));
+
+                }
+            }
+            MessageBox.Show(Sdr.FieldCount.ToString());
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           
+
+                var departments = db.Categories.OrderBy(d => d.Name).ToList();
+                cbCategories.ItemsSource = departments;
+           
         }
     }
 }

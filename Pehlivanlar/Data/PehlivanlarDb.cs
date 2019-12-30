@@ -11,6 +11,7 @@ namespace Pehlivanlar.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public PehlivanlarDb() : base()
         {
 
@@ -78,29 +79,29 @@ namespace Pehlivanlar.Data
                 );
 
             //Categories are added to database.
-            modelBuilder.Entity<Categories>().HasData(
-                new Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category
                 {
                     ID = 1,
                     Name = "Televizyon"
                 });
 
-            modelBuilder.Entity<Categories>().HasData(
-                new Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category
                 {
                     ID = 2,
                     Name = "Buzdolabı"
                 });
 
-            modelBuilder.Entity<Categories>().HasData(
-                new Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category
                 {
                     ID = 3,
                     Name = "Çamaşır Makinesi"
                 });
 
-            modelBuilder.Entity<Categories>().HasData(
-                new Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category
                 {
                     ID = 4,
                     Name = "Bulaşık Makinesi"

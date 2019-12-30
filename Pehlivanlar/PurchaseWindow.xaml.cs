@@ -33,7 +33,7 @@ namespace Pehlivanlar
 
         private void dgPurchase_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
-            Categories categories = dgPurchase.SelectedItem as Categories;
+            Category categories = dgPurchase.SelectedItem as Category;
             if (categories != null)
             {
 

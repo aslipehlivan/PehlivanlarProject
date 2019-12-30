@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Yeni Ürün Ekle" Height="500" Width="400">
+        Title="Yeni Ürün Ekle" Height="500" Width="400" Loaded="Window_Loaded">
     <StackPanel Margin="15">
         <Label Content="Ürün kodu" Height="25" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtCode" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -17,12 +17,12 @@
         <TextBox Text="" Name="txtProperties" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <Label Content="Kategori" Height="25" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCategories" Margin="5">
+        <ComboBox x:Name="cbCategories" Margin="5" ContextMenuOpening="cbCategories_ContextMenuOpening">
 
-             <ComboBoxItem Content="Televizyon" x:Name="cbTelevizyon" DataObject.Copying="cbTV" Selected="cbTelevizyon_Selected"></ComboBoxItem>
+             <!--<ComboBoxItem Content="Televizyon" x:Name="cbTelevizyon" DataObject.Copying="cbTV" Selected="cbTelevizyon_Selected"></ComboBoxItem>
              <ComboBoxItem Content="Buzdolabı" x:Name="cbBuzdolabı" Selected="cbBuzdolabı_Selected"></ComboBoxItem>
              <ComboBoxItem Content="Çamaşır Makinesi" x:Name="cbCamasir" Selected="cbCamasir_Selected"></ComboBoxItem>
-             <ComboBoxItem Content="Bulaşık Makinesi" x:Name="cbBulaik" Selected="cbBulaik_Selected"></ComboBoxItem>
+             <ComboBoxItem Content="Bulaşık Makinesi" x:Name="cbBulaik" Selected="cbBulaik_Selected"></ComboBoxItem>-->
 
         </ComboBox>
        
