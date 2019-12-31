@@ -11,6 +11,11 @@ namespace Pehlivanlar.User
         public bool CanChangePassword { get; set; }
         public bool CanChangePrice { get; set; }
         public bool CanChangeStock { get; set; }
+}
 
+    public enum RoleType
+    {
+        Admin = 1,
+        Staff = 2
     }
 }

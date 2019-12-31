@@ -22,13 +22,11 @@ namespace Pehlivanlar
     /// </summary>
     public partial class AddNewProductWindow : Window
     {
+        PehlivanlarDb db = new PehlivanlarDb();
         public AddNewProductWindow()
         {
             InitializeComponent();
         }
-        PehlivanlarDb db = new PehlivanlarDb();
-        private PehUser pehUser;
-
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
@@ -80,7 +78,7 @@ namespace Pehlivanlar
 
         private void btnHomePage_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow(pehUser);
+            MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }

@@ -20,9 +20,9 @@ namespace Pehlivanlar
     public partial class UserWindow1 : Window
     {
         private PehUser loginUser;
-        public UserWindow1(PehUser pehUser)
+        public UserWindow1()
         {
-            loginUser = pehUser;
+            loginUser = (PehUser)App.Current.Properties["User"];
             InitializeComponent();
         }
 
@@ -35,7 +35,7 @@ namespace Pehlivanlar
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow(loginUser);
+            MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }

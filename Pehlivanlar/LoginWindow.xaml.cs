@@ -35,7 +35,10 @@ namespace Pehlivanlar
             }
             else
             {
-                MainWindow mainWindow = new MainWindow(loginUser);
+                //Userı diğer ekranlarda kullanabilmek için App.Current.Properties["User"] şeklinde atama yapıldı
+                //https://stackoverflow.com/questions/1161459/wpf-application-using-a-global-variable
+                App.Current.Properties["User"] = loginUser;
+                MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
             }
