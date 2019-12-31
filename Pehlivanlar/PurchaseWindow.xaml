@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
         Title="Alım" Height="360" Width="400">
-    <StackPanel>
+    <StackPanel Background="Cornsilk">
         <Label Content="Alınan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
             <ComboBox.ItemTemplate>

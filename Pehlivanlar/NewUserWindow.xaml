@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
         Title="Yeni Kullanıcı Oluştur" Height="400" Width="400" Loaded="Window_Loaded">
-    <StackPanel Margin="15">
+    <StackPanel Margin="15" Background="Cornsilk">
         <Label Content="Ad" Height="25" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtName" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 

@@ -37,6 +37,7 @@ namespace Pehlivanlar
             product.Code = txtCode.Text;
             product.Color = txtColor.Text;
             product.Properties = txtProperties.Text;
+            product.Stock = Int32.Parse(txtAmount.Text);
 
             var selectedCategory = cbCategories.SelectedItem as Category;
             if (selectedCategory == null)
@@ -62,6 +63,7 @@ namespace Pehlivanlar
             txtCode.Text = "";
             txtColor.Text = "";
             txtProperties.Text = "";
+            txtAmount.Text = "";
 
         }
 

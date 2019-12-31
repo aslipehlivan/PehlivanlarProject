@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Yeni Ürün Ekle" Height="400" Width="400" Loaded="Window_Loaded">
-    <StackPanel Margin="15">
+        Title="Yeni Ürün Ekle" Height="500" Width="400" Loaded="Window_Loaded">
+    <StackPanel Margin="15" Background="Cornsilk">
         <Label Content="Ürün kodu" Height="25" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtCode" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         
@@ -43,6 +43,10 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         
+        <Label Content="Ürün adedi" Height="25" FontFamily="Calibri"/>
+        <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
         <Button x:Name="btnAddProduct" Content="Ekle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Click="btnAddProduct_Click" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
         <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" Click="btnHomePage_Click" />
 

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="UserWindow1" Height="310" Width="400" Loaded="Window_Loaded">
-    <Grid Background="Ivory">
+        Title="Kullanıcı Bilgileri" Height="310" Width="400" Loaded="Window_Loaded">
+    <Grid Margin="5" Background="Cornsilk">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="75"></RowDefinition>

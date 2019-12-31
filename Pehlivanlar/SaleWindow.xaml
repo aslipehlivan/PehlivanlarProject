@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Satış" Height="360" Width="400">
-    <StackPanel>
-        <Label Content="Satılan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
+        Title="Satış" Height="360" Width="400" Loaded="Window_Loaded">
+    <StackPanel Background="Cornsilk" Margin="5">
+        <!--<Label Content="Satılan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -19,7 +19,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>
+        <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>-->
 
         <Label Content="Satılan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCodes" Margin="5">
@@ -38,7 +38,7 @@
         <Label Content="Satılan ürünün adedini giriniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-        <Button x:Name="btnPurchase" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="btnUpdateStock" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btnUpdateStock_Click"  />
 
 
 
