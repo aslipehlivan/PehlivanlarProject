@@ -25,12 +25,11 @@ namespace Pehlivanlar
             InitializeComponent();
         }
 
-
-        //private void btnSelectCode_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Product product = new Product();
-        //    var selectedCode = cbCodes.SelectedItem as Code;
-
-        //}
+        private void btnHomePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

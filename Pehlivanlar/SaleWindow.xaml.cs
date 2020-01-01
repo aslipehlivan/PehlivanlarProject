@@ -30,25 +30,46 @@ namespace Pehlivanlar
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var codes = db.Products.OrderBy(p => p.Code).ToList();
+            var codes = db.Products.OrderBy(p => p.Code).ToList(); //databaseden ürünleri çekip kodlarına göre sıralar.
             cbCodes.ItemsSource = codes;
         }
 
         private void btnUpdateStock_Click(object sender, RoutedEventArgs e)
         {
-
-            Product product = new Product();
             var selectedCode = cbCodes.SelectedItem as Product;
             if (selectedCode == null)
             {
-                MessageBox.Show("Kategori seçiniz");
+                MessageBox.Show("Ürün kodu seçiniz");
                 return;
             }
-            product.CategoryID = selectedCode.ID;
-            product.Stock -= Int32.Parse(txtAmount.Text);
-            db.Update(product);
-            db.SaveChanges();
-            MessageBox.Show("Stok güncellendi.");
+
+            Product product = db.Products.FirstOrDefault(p => p.ID == selectedCode.ID); //databaseden ürünleri çekip comboboxdan seçilen ürünün IDsiyle aynı olanı seçer.
+            if (product.Stock >= Int32.Parse(txtAmount.Text))
+            {
+                product.Stock -= Int32.Parse(txtAmount.Text);
+                db.Update(product);
+                db.SaveChanges();
+                lblStock.Content = "Stok adedi: " + product.Stock;
+                MessageBox.Show("Stok güncellendi."); 
+
+            }
+            else
+            {
+                MessageBox.Show("Yeterli stok bulunamadı.");
+            }
+        }
+
+        private void btnHomePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void cbCodes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Product product = db.Products.FirstOrDefault(p => p.ID == ((Product)cbCodes.SelectedItem).ID); //combodan seçilen ürünü çeker.
+            lblStock.Content = "Stok adedi: " + product.Stock;
         }
     }
     

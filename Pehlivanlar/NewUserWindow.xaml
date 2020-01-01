@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Yeni Kullanıcı Oluştur" Height="400" Width="400" Loaded="Window_Loaded">
+        Title="Yeni Kullanıcı Oluştur" Height="450" Width="400" Loaded="Window_Loaded">
     <StackPanel Margin="15" Background="Cornsilk">
         <Label Content="Ad" Height="25" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtName" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -34,7 +34,7 @@
 
         
         <Button x:Name="btnAddUser" Content="Kaydet" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5"  Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btnAddUser_Click"/>
-        <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" />
+        <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" Click="btnHomePage_Click" />
         
     </StackPanel>
 </Window>

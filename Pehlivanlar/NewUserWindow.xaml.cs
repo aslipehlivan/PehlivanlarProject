@@ -33,9 +33,8 @@ namespace Pehlivanlar
             pehUser.Name = txtName.Text;
             pehUser.Surname = txtSurname.Text;
             pehUser.UserName = txtUserName.Text;
-            // pehUser.Password = hashPassword(pwPassword.ToString());
-            pehUser.Password = pwPassword.ToString();
 
+            pehUser.Password = new Service.PehUserService().hashPassword(pwPassword.Password);
             var selectedRole = cbUserRole.SelectedItem as Role;
             if (selectedRole == null)
             {
@@ -63,9 +62,13 @@ namespace Pehlivanlar
 
         }
 
-        //private void btnHomePage_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MainWindow mainWindow = new MainWindow(PehUser)
-        //}
+        private void btnHomePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+
     }
 }

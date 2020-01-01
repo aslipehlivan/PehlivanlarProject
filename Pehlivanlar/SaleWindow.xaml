@@ -22,7 +22,7 @@
         <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>-->
 
         <Label Content="Satılan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCodes" Margin="5">
+        <ComboBox x:Name="cbCodes" Margin="5" SelectionChanged="cbCodes_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -33,12 +33,13 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Seç" x:Name="btnSelectCode" Margin="5"></Button>
+        <Label Content="Stok adedi: " x:Name="lblStock" Height="25" Margin="5" FontFamily="Calibri"/>
 
         <Label Content="Satılan ürünün adedini giriniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <Button x:Name="btnUpdateStock" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btnUpdateStock_Click"  />
+        <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" Click="btnHomePage_Click" />
 
 
 
