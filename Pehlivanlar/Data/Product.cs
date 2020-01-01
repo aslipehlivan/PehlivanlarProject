@@ -14,5 +14,7 @@ namespace Pehlivanlar.Data
         public int SupplierID { get; set; }
         public int Stock { get; set; }
         public int Price { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

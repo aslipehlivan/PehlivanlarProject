@@ -7,19 +7,6 @@
         mc:Ignorable="d"
         Title="Satış" Height="360" Width="400" Loaded="Window_Loaded">
     <StackPanel Background="Cornsilk" Margin="5">
-        <!--<Label Content="Satılan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCategories" Margin="5">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <WrapPanel>
-                        <TextBlock Text="{Binding Code}"></TextBlock>
-                        <TextBlock Text=" "></TextBlock>
-                        <TextBlock Text="{Binding Name}"></TextBlock>
-                    </WrapPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>-->
 
         <Label Content="Satılan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCodes" Margin="5" SelectionChanged="cbCodes_SelectionChanged">

@@ -114,7 +114,9 @@ namespace Pehlivanlar
 
         private void btnDisplay_Click(object sender, RoutedEventArgs e)
         {
-
+            AllProducts allProducts = new AllProducts();
+            allProducts.Show();
+            this.Close();
         }
     }
 }

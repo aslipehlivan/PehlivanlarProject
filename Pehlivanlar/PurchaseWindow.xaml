@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Alım" Height="360" Width="400">
+        Title="Alım" Height="360" Width="400" Loaded="Window_Loaded">
     <StackPanel Background="Cornsilk">
         <Label Content="Alınan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCategories" Margin="5">
@@ -19,10 +19,9 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Seç" x:Name="btnSelectCategory" Margin="5" ></Button>
         
         <Label Content="Alınan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCodes" Margin="5">
+        <ComboBox x:Name="cbCodes" Margin="5" SelectionChanged="cbCodes_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -33,7 +32,6 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Seç" x:Name="btnSelectCode" Margin="5"></Button>
         
         <Label Content="Alınan ürünün adedini giriniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>

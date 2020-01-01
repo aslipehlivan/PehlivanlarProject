@@ -10,4 +10,12 @@ namespace Pehlivanlar.Data
         public string Name { get; set; }
 
     }
+    public enum CatName
+    {
+        Televizyon = 1,
+        Buzolabı = 2,
+        ÇamaşırMakinesi = 3,
+        BulaşıkMakinesi = 4
+    }
+
 }

@@ -10,5 +10,10 @@ namespace Pehlivanlar.Data
         public string Name { get; set; }
         public string Location { get; set; }
     }
+    public enum SuppName
+    {
+        Beko = 1,
+        Vestel = 2
+    }
 }
 
