@@ -13,6 +13,6 @@ namespace Pehlivanlar.Data
         public int CategoryID { get; set; }
         public int SupplierID { get; set; }
         public int Stock { get; set; }
-
+        public int Price { get; set; }
     }
 }

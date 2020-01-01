@@ -111,5 +111,10 @@ namespace Pehlivanlar
 
 
         }
+
+        private void btnDisplay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

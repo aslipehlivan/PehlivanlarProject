@@ -12,9 +12,12 @@
             <RowDefinition Height="59"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Menu Background="LightSteelBlue" Grid.Row="0" FontFamily="Calibri" FontSize="18" Margin="0,0,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Background="LightSteelBlue" Grid.Row="0" FontFamily="Calibri" Grid.ColumnSpan="2"  FontSize="18" Margin="0,0,0,1">
             <MenuItem Header="Kullanıcı"  FontSize="18" Height="40">
                 <MenuItem Header="Yeni Kullanıcı Oluştur" x:Name="mnNewUser" Click="mnNewUser_Click"></MenuItem>
                 <MenuItem x:Name="mnUserInfo" Header="Bilgileri gör" Click="mnUserInfo_Click"></MenuItem>
@@ -27,9 +30,11 @@
 
             </MenuItem>
         </Menu>
-        <TextBlock Background="Bisque" Name="txtLoginUser" FontFamily="Calibri" FontSize="22" Margin="0,40,0,1" Grid.RowSpan="2"/>
-        <Button x:Name="btnPurchase" Content="Alım" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="30" FontFamily="Calibri" FontSize="18" Click="btnPurchase_Click"/>
-        <Button x:Name="btnSale" Content="Satım" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="30" Width="80" FontFamily="Calibri" FontSize="18" Click="btnSale_Click"></Button>
-        <Button x:Name="btnNewProduct" Content="Yeni Ürün" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="80" Height="30" FontFamily="Calibri" FontSize="18" Click="btnNewProduct_Click"></Button>
+        <TextBlock Grid.ColumnSpan="2" Background="Bisque" Name="txtLoginUser" FontFamily="Calibri" FontSize="22" Margin="0,40,0,1" Grid.RowSpan="2"/>
+        <Button x:Name="btnPurchase" Content="Alım" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="150" Height="30" FontFamily="Calibri" FontSize="18" Click="btnPurchase_Click"/>
+        <Button x:Name="btnSale" Content="Satım" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Height="30" Width="150" FontFamily="Calibri" FontSize="18" Click="btnSale_Click"></Button>
+        <Button x:Name="btnNewProduct" Content="Yeni Ürün" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="150" Height="30" FontFamily="Calibri" FontSize="18" Click="btnNewProduct_Click"></Button>
+        <Button x:Name="btnDisplay" Content="Ürünleri Görüntüle" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="150" Height="30" FontFamily="Calibri" FontSize="18" Click="btnDisplay_Click"/>
+
     </Grid>
 </Window>

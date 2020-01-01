@@ -117,7 +117,8 @@ namespace Pehlivanlar.Data
                     Properties = "72 Ekran",
                     CategoryID = 1,
                     SupplierID = 1,
-                    Stock = 12
+                    Stock = 12,
+                    Price = 1200
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -129,7 +130,8 @@ namespace Pehlivanlar.Data
                     Properties = "72 Ekran",
                     CategoryID = 1,
                     SupplierID = 1,
-                    Stock = 3
+                    Stock = 3,
+                    Price = 1400
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -141,7 +143,8 @@ namespace Pehlivanlar.Data
                     Properties = "105 Ekran",
                     CategoryID = 1,
                     SupplierID = 2,
-                    Stock = 5
+                    Stock = 5,
+                    Price = 1500
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -153,7 +156,8 @@ namespace Pehlivanlar.Data
                     Properties = "465 Litre",
                     CategoryID = 2,
                     SupplierID = 1,
-                    Stock = 15
+                    Stock = 15,
+                    Price = 2400
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -165,7 +169,8 @@ namespace Pehlivanlar.Data
                     Properties = "550 Litre",
                     CategoryID = 2,
                     SupplierID = 1,
-                    Stock = 6
+                    Stock = 6,
+                    Price = 2800
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -177,7 +182,8 @@ namespace Pehlivanlar.Data
                     Properties = "270 Litre",
                     CategoryID = 2,
                     SupplierID = 2,
-                    Stock = 15
+                    Stock = 15,
+                    Price = 2000
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -189,7 +195,8 @@ namespace Pehlivanlar.Data
                     Properties = "800 Litre",
                     CategoryID = 3,
                     SupplierID = 1,
-                    Stock = 17
+                    Stock = 17,
+                    Price = 3400
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -201,7 +208,8 @@ namespace Pehlivanlar.Data
                     Properties = "800 Devir",
                     CategoryID = 3,
                     SupplierID = 2,
-                    Stock = 9
+                    Stock = 9,
+                    Price = 1800
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -213,7 +221,8 @@ namespace Pehlivanlar.Data
                     Properties = "1000 Devir",
                     CategoryID = 3,
                     SupplierID = 2,
-                    Stock = 6
+                    Stock = 6,
+                    Price = 2460
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -225,7 +234,8 @@ namespace Pehlivanlar.Data
                     Properties = "3 Programlı",
                     CategoryID = 4,
                     SupplierID = 1,
-                    Stock = 11
+                    Stock = 11,
+                    Price = 1860
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -237,7 +247,8 @@ namespace Pehlivanlar.Data
                     Properties = "3 Programlı",
                     CategoryID = 4,
                     SupplierID = 1,
-                    Stock = 3
+                    Stock = 3,
+                    Price = 1950
                 });
 
             modelBuilder.Entity<Product>().HasData(
@@ -249,7 +260,8 @@ namespace Pehlivanlar.Data
                     Properties = "4 Programlı",
                     CategoryID = 4,
                     SupplierID = 2,
-                    Stock = 10
+                    Stock = 10,
+                    Price = 2380
                 });
             modelBuilder.Entity<PehUser>().HasData(
               new PehUser
