@@ -37,14 +37,20 @@ namespace Pehlivanlar
         {
             var categories = db.Categories.OrderBy(c => c.Name).ToList(); //databaseden ürünün kategorisini çekmek için
             cbCategories.ItemsSource = categories;
-            cbCodes_SelectionChanged(categories, );
-            var code = db.Products.OrderBy(p => p.Code).ToList(); //databaseden ürünün kodunu çekmek için
+
+        }
+
+        private void cbCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedCategory = cbCategories.SelectedItem as Category;
+            var code = db.Products.OrderBy(p => p.Code == ((Product)cbCategories.SelectedItem).Code).ToList(); //databaseden ürünün kodunu çekmek için
             cbCodes.ItemsSource = code;
+
         }
 
         private void cbCodes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Product product = db.Products.FirstOrDefault(c => c.CategoryID == ((Category)cbCodes.SelectedItem).ID); //combodan seçilen ürünü çeker.
+            Product product = db.Products.FirstOrDefault(p => p.ID == ((Product)cbCategories.SelectedItem).ID); //combodan seçilen ürünü çeker.
 
         }
     }

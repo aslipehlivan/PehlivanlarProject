@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pehlivanlar"
         mc:Ignorable="d"
-        Title="Kullanıcı Bilgileri" Height="310" Width="400" Loaded="Window_Loaded">
+        Title="Kullanıcı Bilgileri" Height="330" Width="400" Loaded="Window_Loaded">
     <Grid Margin="5" Background="Cornsilk">
 
         <Grid.RowDefinitions>
@@ -23,7 +23,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="25,0,0,0" Grid.Row="3" Text="Kullanıcı Rolü: " TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Calibri" FontSize="14"/>
         <TextBox x:Name="txtloginUserRole" Grid.Row="3" Margin="138,10,138,10" FontFamily="Calibri" FontSize="14"/>
         <Button Content="Anasayfa" Background="CadetBlue" HorizontalAlignment="Left" Margin="300,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="30" Width="75" FontFamily="Calibri" Click="Button_Click"/>
-        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="214" Source="C:\Users\PEHLİVANLAR\Desktop\logo1.JPG" Margin="97,10,0,0" />
+        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="214" Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\logo1.JPG" Margin="97,10,0,0" />
         <Button x:Name="btnUpdateName" Content="Güncelle" HorizontalAlignment="Left" Margin="310,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontFamily="Calibri" Click="btnUpdateName_Click" Height="25" Width="63"/>
         <Button x:Name="btnUpdateSurname" Content="Güncelle" HorizontalAlignment="Left" Margin="310,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontFamily="Calibri" Click="btnUpdateSurname_Click" Height="25" Width="63"/>
 

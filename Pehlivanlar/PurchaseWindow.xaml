@@ -8,7 +8,7 @@
         Title="Alım" Height="360" Width="400" Loaded="Window_Loaded">
     <StackPanel Background="Cornsilk">
         <Label Content="Alınan ürünün kategorisini seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
-        <ComboBox x:Name="cbCategories" Margin="5">
+        <ComboBox x:Name="cbCategories" Margin="5" SelectionChanged="cbCategories_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -19,7 +19,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        
+
         <Label Content="Alınan ürünün kodunu seçiniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <ComboBox x:Name="cbCodes" Margin="5" SelectionChanged="cbCodes_SelectionChanged">
             <ComboBox.ItemTemplate>

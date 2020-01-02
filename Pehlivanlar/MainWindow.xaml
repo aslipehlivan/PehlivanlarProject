@@ -30,6 +30,7 @@
 
             </MenuItem>
         </Menu>
+        
         <TextBlock Grid.ColumnSpan="2" Background="Bisque" Name="txtLoginUser" FontFamily="Calibri" FontSize="22" Margin="0,40,0,1" Grid.RowSpan="2"/>
         <Button x:Name="btnPurchase" Content="Alım" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="150" Height="30" FontFamily="Calibri" FontSize="18" Click="btnPurchase_Click"/>
         <Button x:Name="btnSale" Content="Satım" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Height="30" Width="150" FontFamily="Calibri" FontSize="18" Click="btnSale_Click"></Button>

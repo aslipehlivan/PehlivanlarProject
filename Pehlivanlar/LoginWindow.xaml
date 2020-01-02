@@ -24,7 +24,7 @@
         <TextBlock Grid.Row="2" Grid.Column="0" Margin="40,0,0,0" TextAlignment="Center" Text="Şifre:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <PasswordBox x:Name="txtPassword" Background="LightGray" Grid.Row="2" Margin="175,10,27,10" Grid.ColumnSpan="2" />
         <Button x:Name="btnLogin" Content="Giriş Yap" Grid.Row="3" Width="200" Grid.Column="0" Grid.ColumnSpan="2"  Click="btnLogin_Click" Margin="40,17,0,57" Height="30"/>
-        <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="228" Source="C:\Users\PEHLİVANLAR\Desktop\logo1.JPG" Grid.ColumnSpan="2" Margin="65,0,0,0" RenderTransformOrigin="0.529,0.522" />
+        <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="228" Source="logo1.JPG" Grid.ColumnSpan="2" Margin="65,0,0,0" RenderTransformOrigin="0.529,0.522" />
 
 
     </Grid>
