@@ -19,14 +19,34 @@
         </Grid.ColumnDefinitions>
         <Menu Background="LightSteelBlue" Grid.Row="0" FontFamily="Calibri" Grid.ColumnSpan="2"  FontSize="18" Margin="0,0,0,1">
             <MenuItem Header="Kullanıcı"  FontSize="18" Height="40">
-                <MenuItem Header="Yeni Kullanıcı Oluştur" x:Name="mnNewUser" Click="mnNewUser_Click"></MenuItem>
-                <MenuItem x:Name="mnUserInfo" Header="Bilgileri gör" Click="mnUserInfo_Click"></MenuItem>
+                <MenuItem Header="Yeni Kullanıcı Oluştur" x:Name="mnNewUser" Click="mnNewUser_Click">
+                    <MenuItem.Icon>
+                        <Image Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\newuser.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnUserInfo" Header="Bilgileri gör" Click="mnUserInfo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
 
             <MenuItem Header="İşlemler" FontSize="18" Height="40">
-                <MenuItem Header="Çıkış Yap" x:Name="mnLogout" Click="mnLogout_Click"></MenuItem>
-                <MenuItem Header="Şifre Değiştir" Name="mnChangePassword" Click="mnChangePassword_Click" ></MenuItem>
-                <MenuItem Header="Uygulamadan Çık" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Çıkış Yap" x:Name="mnLogout" Click="mnLogout_Click">
+                    <MenuItem.Icon>
+                        <Image Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\logout.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Şifre Değiştir" Name="mnChangePassword" Click="mnChangePassword_Click" >
+                    <MenuItem.Icon>
+                        <Image Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\key.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Uygulamadan Çık" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="D:\PROJECT\Pehlivanlar\Pehlivanlar\Photos\logout (1).png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
 
             </MenuItem>
         </Menu>

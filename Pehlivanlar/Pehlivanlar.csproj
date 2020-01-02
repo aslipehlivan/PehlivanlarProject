@@ -8,7 +8,11 @@
 
   <ItemGroup>
     <None Remove="logo1.JPG" />
+    <None Remove="Photos\key.png" />
     <None Remove="Photos\logo1.JPG" />
+    <None Remove="Photos\logout %281%29.png" />
+    <None Remove="Photos\logout.png" />
+    <None Remove="Photos\newuser.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +30,11 @@
 
   <ItemGroup>
     <Resource Include="logo1.JPG" />
+    <Resource Include="Photos\key.png" />
     <Resource Include="Photos\logo1.JPG" />
+    <Resource Include="Photos\logout (1).png" />
+    <Resource Include="Photos\logout.png" />
+    <Resource Include="Photos\newuser.png" />
   </ItemGroup>
 
 </Project>
