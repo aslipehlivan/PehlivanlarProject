@@ -40,7 +40,7 @@ namespace Pehlivanlar.Data
                {
                    ID = 2,
                    Name = "Personel",
-                   CanChangePassword = false,
+                   CanChangePassword = true,
                    CanChangePrice = false,
                    CanChangeStock = false
                }

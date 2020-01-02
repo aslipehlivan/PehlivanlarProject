@@ -22,7 +22,7 @@ namespace Pehlivanlar
 
         public MainWindow()
         {
-            loginUser = (PehUser)App.Current.Properties["User"];
+            loginUser = (PehUser)App.Current.Properties["User"]; //Giriş yapan kullanıcıyı her sayfada ayrı ayrı tutmak yerine globalde tutmak için. Link LoginWindowda mevcut.
             InitializeComponent();
         }
 

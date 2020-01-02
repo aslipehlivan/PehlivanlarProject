@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pehlivanlar.Data;
 
 namespace Pehlivanlar.Migrations
 {
     [DbContext(typeof(PehlivanlarDb))]
-    partial class PehlivanlarDbModelSnapshot : ModelSnapshot
+    [Migration("20200102181736_delete")]
+    partial class delete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,10 +87,6 @@ namespace Pehlivanlar.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("CategoryID");
-
-                    b.HasIndex("SupplierID");
 
                     b.ToTable("Products");
 
@@ -302,7 +300,7 @@ namespace Pehlivanlar.Migrations
                         new
                         {
                             ID = 1,
-                            CreatedTime = new DateTime(2020, 1, 2, 21, 20, 14, 907, DateTimeKind.Local).AddTicks(3664),
+                            CreatedTime = new DateTime(2020, 1, 2, 21, 17, 36, 18, DateTimeKind.Local).AddTicks(605),
                             Name = "Ayvaz",
                             Password = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
                             RoleID = 1,
@@ -312,7 +310,7 @@ namespace Pehlivanlar.Migrations
                         new
                         {
                             ID = 2,
-                            CreatedTime = new DateTime(2020, 1, 2, 21, 20, 14, 909, DateTimeKind.Local).AddTicks(8854),
+                            CreatedTime = new DateTime(2020, 1, 2, 21, 17, 36, 20, DateTimeKind.Local).AddTicks(6710),
                             Name = "Yaşar",
                             Password = "840c2dce747a818940d2c83d918a712a890ccdcfa4a97b1ccb71ec5d6cea1bbb",
                             RoleID = 2,
@@ -361,21 +359,6 @@ namespace Pehlivanlar.Migrations
                             CanChangeStock = false,
                             Name = "Personel"
                         });
-                });
-
-            modelBuilder.Entity("Pehlivanlar.Data.Product", b =>
-                {
-                    b.HasOne("Pehlivanlar.Data.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Pehlivanlar.Data.Supplier", "Supplier")
-                        .WithMany()
-                        .HasForeignKey("SupplierID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Pehlivanlar.User.PehUser", b =>

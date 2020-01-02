@@ -25,7 +25,7 @@ namespace Pehlivanlar
             InitializeComponent();
             using (PehlivanlarDb db = new PehlivanlarDb())
             {
-                dgProducts.ItemsSource = db.Products.ToList(); //for receiving data from database
+                dgProducts.ItemsSource = db.Products.Include(i => i.Category).Include(i => i.Supplier).ToList(); //Foreign keylerle bağlantı bu kodla kuruluyor.
             }
         }
 

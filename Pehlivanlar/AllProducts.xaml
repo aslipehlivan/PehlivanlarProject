@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Tüm Ürünler" FontFamily="Calibri" Height="450" Width="400">
     <StackPanel Margin="5" Background="Cornsilk">
-        <Label Content="Tüm Ürünler" Height="25" FontFamily="Calibri" FontSize="14" FontWeight="Bold"></Label>
-        <DataGrid Name="dgProducts" Height="320" AutoGenerateColumns="False">
+        <Label Content="Tüm Ürünler" Height="25" FontFamily="Calibri" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <DataGrid Name="dgProducts" Height="320" AutoGenerateColumns="False" HeadersVisibility="All">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}" FontFamily="Calibri"/>
                 <DataGridTextColumn Header="Kod" Binding="{Binding Path=Code}" FontFamily="Calibri"/>
-                <DataGridTextColumn Header="Kategori" Binding="{Binding Path=Product.CatName}" FontFamily="Calibri"/>
-                <DataGridTextColumn Header="Alınan Firma" Binding="{Binding Path=Product.SuppName}" FontFamily="Calibri"/>
+                <DataGridTextColumn Header="Kategori" Binding="{Binding Path=Category.Name}" FontFamily="Calibri"/>
+                <DataGridTextColumn Header="Alınan Firma" Binding="{Binding Path=Supplier.Name}" FontFamily="Calibri"/>
                 <DataGridTextColumn Header="Stok" Binding="{Binding Path=Stock}" FontFamily="Calibri"/>
                 <DataGridTextColumn Header="Fiyat" Binding="{Binding Path=Price}" FontFamily="Calibri"/>
             </DataGrid.Columns>

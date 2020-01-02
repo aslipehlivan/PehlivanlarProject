@@ -33,10 +33,12 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         
+        <Label Content="Stok adedi: " x:Name="lblStock" Height="25" Margin="5" FontFamily="Calibri"/>
+
         <Label Content="Alınan ürünün adedini giriniz." Height="25" Margin="5" FontFamily="Calibri"/>
         <TextBox Text="" Name="txtAmount" Margin="5" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         
-        <Button x:Name="btnPurchase" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="btnPurchase" Content="Stoğu güncelle" Background="ForestGreen" FontFamily="Calibri" Margin="5,5,5,5" Width="180" Height="40" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btnPurchase_Click"/>
         <Button Content="Anasayfa" x:Name="btnHomePage" FontFamily="Calibri" Width="50" Height="25" HorizontalAlignment="Right" Margin="0,0,20,0" Click="btnHomePage_Click" />
 
 
